@@ -42,10 +42,7 @@ class XmippParticlePickingAutomatic(ProtParticlePickingAuto, XmippProtocol):
     micrographs using previous training """
     _label = 'auto-picking (step 2)'
 
-    _treeLocations = [("XMIPP Protocols",
-                       "{'text': 'Particles', 'openItem': true, 'priority': 3}",
-                       "{'text': 'Picking', 'openItem': false, 'priority': 1}",
-                       "{'text': 'auto-picking (step 2)', 'tag': 'protocol', 'priority': 2}")]
+
     
     filesToCopy = ['model_training.txt', 'model_svm.txt',
                    'model_pca_model.stk', 'model_rotpca_model.stk',

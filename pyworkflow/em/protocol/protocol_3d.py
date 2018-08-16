@@ -38,6 +38,7 @@ class ProtPreprocessVolumes(Prot3D):
     that performs some operation on Volumes (i.e. filters, mask, resize, etc)
     It is mainly defined by an inputVolumes and outputVolumes.
     """
+    _treeLocations = [("Protocols Test", "3D", "Preprocess")]
     def _defineParams(self, form):
         form.addSection(label=Message.LABEL_INPUT)
         
@@ -83,22 +84,27 @@ class ProtAlignVolume(ProtPreprocessVolumes):
 
 
 class ProtReconstruct3D(Prot3D):
+    _treeLocations = [("Protocols Test", "3D", "Reconstruct")]
     pass
 
 class ProtRefine3D(Prot3D):
+    _treeLocations = [("Protocols Test", "3D", "Refine")]
     pass
 
 
 class ProtClassify3D(Prot3D):
+    _treeLocations = [("Protocols Test", "3D", "Classify")]
     pass
 
 
 class ProtInitialVolume(Prot3D):
     """Protocol base for Initial volumes protocols"""
+    _treeLocations = [("Protocols Test", "3D", "Initial Volume")]
     pass
 
 
 class ProtAnalysis3D(Prot3D):
+    _treeLocations = [("Protocols Test", "3D", "Analysis")]
     pass
 
 class ProtFitting3D(Prot3D):

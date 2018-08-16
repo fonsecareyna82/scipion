@@ -43,10 +43,6 @@ from pyworkflow.em.packages.xmipp3.convert import mdToCTFModel, readCTFModel
 class XmippProtCTFMicrographs(em.ProtCTFMicrographs):
     """ Protocol to estimate CTF on a set of micrographs using Xmipp. """
     _label = 'ctf estimation'
-    _treeLocations = [("XMIPP Protocols", "{'text': 'Micrographs', 'openItem': true, 'priority': 2}","CTF estimation")]
-
-
-
     _criterion = ("ctfCritFirstZero<5 OR ctfCritMaxFreq>20 OR "
                   "ctfCritfirstZeroRatio<0.9 OR ctfCritfirstZeroRatio>1.1 OR "
                   "ctfCritFirstMinFirstZeroRatio>10 OR ctfCritCorr13<0 OR "

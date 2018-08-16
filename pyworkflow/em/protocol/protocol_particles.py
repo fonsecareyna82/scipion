@@ -52,6 +52,7 @@ class ProtProcessParticles(ProtParticles):
     that performs some operation on Particles (i.e. filters, mask, resize, etc)
     It is mainly defined by an inputParticles and outputParticles.
     """
+    _treeLocations = [("Protocols Test", "Particles", "Preprocess")]
     def _defineParams(self, form):
         form.addSection(label=Message.LABEL_INPUT)
         
@@ -80,12 +81,14 @@ class ProtProcessParticles(ProtParticles):
 class ProtFilterParticles(ProtProcessParticles):
     """ Base class for filters on particles of type ProtPreprocessParticles.
     """
+    _treeLocations = [("Protocols Test", "Particles", "Filter")]
     pass
 
 
 class ProtOperateParticles(ProtProcessParticles):
     """ Base class for operations on particles of type ProtPreprocessParticles.
     """
+    _treeLocations = [("Protocols Test", "Tools", "Calculators")]
     def __init__(self, **args):
         ProtProcessParticles.__init__(self, **args)
 
@@ -93,6 +96,7 @@ class ProtOperateParticles(ProtProcessParticles):
 class ProtMaskParticles(ProtProcessParticles):
     """ This is the base for the branch of mask, 
     between the ProtPreprocessParticles """
+    _treeLocations = [("Protocols Test", "Particles", "Mask")]
     pass
 
 
@@ -106,6 +110,7 @@ class ProtExtractParticles(ProtParticles):
      This class will take care of the streaming functionality and
      derived classes should mainly overwrite the '_extractMicrograph' function.
      """
+    _treeLocations = [("Protocols Test", "Particles", "Extract")]
     # --------------------------- DEFINE param functions ------------------------
     def _defineParams(self, form):
         form.addSection(label='Input')

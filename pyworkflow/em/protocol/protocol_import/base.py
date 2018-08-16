@@ -52,6 +52,7 @@ class ProtImportFiles(ProtImport):
         (_importFile(fileName, fileId))
     """
     IMPORT_FROM_FILES = 0
+    _treeLocations = [("Protocols Test", "Imports")]
 
     #--------------------------- DEFINE param functions ------------------------
     def _defineParams(self, form):

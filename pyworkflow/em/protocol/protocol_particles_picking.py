@@ -43,6 +43,7 @@ from protocol_particles import ProtParticles
 
 class ProtParticlePicking(ProtParticles):
     OUTPUT_PREFIX = 'outputCoordinates'
+    _treeLocations = [("Protocols Test", "Particles", "Picking")]
 
     def _defineParams(self, form):
 

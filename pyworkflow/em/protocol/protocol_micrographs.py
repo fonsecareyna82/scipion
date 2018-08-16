@@ -52,6 +52,8 @@ class ProtMicrographs(EMProtocol):
 class ProtCTFMicrographs(ProtMicrographs):
     """ Base class for all protocols that estimates the CTF"""
 
+    _treeLocations = [("Protocols Test", "Micrographs")]
+
     def __init__(self, **kwargs):
         EMProtocol.__init__(self, **kwargs)
         self.stepsExecutionMode = STEPS_PARALLEL
@@ -652,4 +654,5 @@ class ProtCTFMicrographs(ProtMicrographs):
 
 
 class ProtPreprocessMicrographs(ProtMicrographs):
+    _treeLocations = [("Protocols Test", "Micrographs")]
     pass

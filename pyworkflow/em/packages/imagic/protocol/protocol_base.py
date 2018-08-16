@@ -34,6 +34,7 @@ from ..imagic import runTemplate
 
 class ImagicProtocol(EMProtocol):
     """ Sub-class of EMProtocol to group some common Imagic utils. """
+    _treeLocations = [("Protocols Test", "2D", "Classify")]
 
     def _getFileName(self, key):
         """ Give a key, append the img extension

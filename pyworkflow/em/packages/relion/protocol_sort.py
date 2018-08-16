@@ -47,6 +47,7 @@ class ProtRelionSortParticles(ProtParticles):
 
     """
     _label = 'sort particles'
+    _treeLocations = [("Protocols Test", "Particles", "Extract")]
     _lastUpdateVersion = VERSION_1_1
 
     #--------------------------- DEFINE param functions ------------------------

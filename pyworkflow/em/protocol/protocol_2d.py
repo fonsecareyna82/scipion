@@ -42,6 +42,8 @@ class ProtAlign2D(Prot2D):
         A set of partices
         and will allow the option to generate the aligned particles.
     """
+    _treeLocations = [("Protocols Test", "2D", "Align")]
+
     def _defineParams(self, form):
         form.addSection(label='Input')
         
@@ -58,10 +60,12 @@ class ProtAlign2D(Prot2D):
 
 class ProtCreateMask2D(Prot2D):
     """ For those protocols who create mask as output. """
+    _treeLocations = [("Protocols Test", "Particles", "Mask")]
     pass
 
 
 class ProtClassify2D(Prot2D):
+    _treeLocations = [("Protocols Test", "2D","Classify")]
     pass
 
 class ProtAnalysis2D(Prot2D):

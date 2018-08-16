@@ -50,11 +50,9 @@ class XmippProtExtractMovieParticles(ProtExtractMovieParticles):
     """ Extract a set of Particles from each frame of a set of Movies.
     """
     _label = 'extract movie particles'
+    _treeLocations = [("Protocols Test", "Particles", "Extract")]
 
-    _treeLocations = [("XMIPP Protocols",
-                       "{'text': 'Particles', 'openItem': true, 'priority': 3}",
-                       "{'text': 'Extract', 'openItem': false, 'priority': 2}",
-                       "more")]
+
 
     def __init__(self, **kwargs):
         ProtExtractMovieParticles.__init__(self, **kwargs)

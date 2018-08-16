@@ -38,6 +38,7 @@ from pyworkflow.object import Boolean
 
 class ProtSets(EMProtocol):
     """ Base class for all protocols related to subsets. """
+    _treeLocations = [("Protocols Test", "Tools", "Sets")]
     pass
 
 

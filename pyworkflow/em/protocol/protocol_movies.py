@@ -57,6 +57,8 @@ class ProtProcessMovies(ProtPreprocessMicrographs):
     CONVERT_TO_MRC = None
     CORRECT_GAIN = False
 
+    _treeLocations = [("Protocols Test", "Movies")]
+
     def __init__(self, **kwargs):
         ProtPreprocessMicrographs.__init__(self, **kwargs)
         self.stepsExecutionMode = STEPS_PARALLEL
@@ -419,6 +421,7 @@ class ProtProcessMovies(ProtPreprocessMicrographs):
 class ProtExtractMovieParticles(ProtExtractParticles, ProtProcessMovies):
     """ Extract a set of Particles from each frame of a set of Movies.
     """
+
     def _defineParams(self, form):
         ProtExtractParticles._defineParams(self, form)
         ProtProcessMovies._defineParams(self, form)
